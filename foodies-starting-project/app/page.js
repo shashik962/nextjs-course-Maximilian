@@ -5,5 +5,5 @@ export default function Home() {
         Time to get started!
       </h1>
     </main>
-  );
+  ); 
 }
