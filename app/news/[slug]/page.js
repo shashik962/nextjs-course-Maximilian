@@ -14,7 +14,6 @@ export default function NewsDetailsPage({ params }) {
                 <h1>News Details Page</h1>
                 <time dateTime={newsItem.date}>{newsItem.date}</time>
             </header>
-           
             <p>{newsItem.content}</p>
         </article>
     )
