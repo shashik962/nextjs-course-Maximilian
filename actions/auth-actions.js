@@ -2,7 +2,7 @@
 import { redirect } from 'next/navigation';
 
 import { hashUserPassword } from '@/lib/hash';
-import { createUser } from '@/lib/user';
+import { createUser, getUserByEmail } from '@/lib/user';
 import { createAuthSession } from '@/lib/auth';
 
 export async function signup(prevState, formData) {
@@ -67,4 +67,11 @@ export async function login(prevState, formData) {
   
     await createAuthSession(existingUser.id);
     redirect('/training');
+  }
+
+  export async function auth(mode, prevState, formData) {
+    if (mode === 'login') {
+      return login(prevState, formData);
+    }
+    return signup(prevState, formData);
   }
