@@ -12,7 +12,7 @@ function PostsList() {
     setEnteredBody(event.target.value);
   }
 
-  function authorChangeHandler(event) {
+  function authorChangeHandler(event) { 
     setEnteredAuthor(event.target.value);
   }
 
